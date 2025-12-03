@@ -1,8 +1,8 @@
-package com.example.Fight_Club.controller;
+package com.example.fight_club.controller;
 
-import com.example.Fight_Club.model.Fighter;
-import com.example.Fight_Club.dto.FighterResponseDto;
-import com.example.Fight_Club.servise.FightersService;
+import com.example.fight_club.dto.FighterResponseDto;
+import com.example.fight_club.model.Fighter;
+import com.example.fight_club.servise.FightersService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -26,7 +26,6 @@ public class FightersController {
     @Autowired
     public FightersController(FightersService fightersService) {
         this.fightersService = fightersService;
-
     }
 
     @PostMapping("/createFighter")
@@ -50,8 +49,7 @@ public class FightersController {
                 .sorted(Comparator.comparing(Fighter::getBeltColorFighter))
                 .limit(16)
                 .collect(Collectors.toList());
-        ResponseEntity<FighterResponseDto> ok = ResponseEntity.ok(new FighterResponseDto(collect));
-        return ok;
+        return ResponseEntity.ok(new FighterResponseDto(collect));
     }
 
     @GetMapping("/{id}")
@@ -65,5 +63,4 @@ public class FightersController {
     public void deleteFighterById(@PathVariable Long id) {
         fightersService.deleteFighterById(id);
     }
-
 }

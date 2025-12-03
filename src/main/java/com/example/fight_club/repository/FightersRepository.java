@@ -1,6 +1,6 @@
-package com.example.Fight_Club.repository;
+package com.example.fight_club.repository;
 
-import com.example.Fight_Club.model.Fighter;
+import com.example.fight_club.model.Fighter;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +17,5 @@ public interface FightersRepository extends CrudRepository<Fighter, Long> {
     Optional<Fighter> findByNameContainingIgnoreCase(String lastName);
 
     Optional<Fighter> deleteFighterById(Long id);
-
 }
 

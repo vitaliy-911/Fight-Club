@@ -1,8 +1,8 @@
-package com.example.Fight_Club.servise;
+package com.example.fight_club.servise;
 
-import com.example.Fight_Club.exception.ResourceNotFoundException;
-import com.example.Fight_Club.model.Fighter;
-import com.example.Fight_Club.repository.FightersRepository;
+import com.example.fight_club.exception.ResourceNotFoundException;
+import com.example.fight_club.model.Fighter;
+import com.example.fight_club.repository.FightersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,7 +38,7 @@ public class FightersService {
     }
 
     public void deleteFighterById(Long id) {
-        Optional<Fighter> fighter = fightersRepository.deleteFighterById(id);
+        fightersRepository.deleteFighterById(id);
     }
 
 
@@ -54,9 +54,6 @@ public class FightersService {
     }
 
     public Fighter createFighter(Fighter fighter) {
-        Fighter saved = fightersRepository.save(fighter);
-        return saved;
+        return fightersRepository.save(fighter);
     }
-
-
 }

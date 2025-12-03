@@ -1,4 +1,4 @@
-package com.example.Fight_Club;
+package com.example.fight_club;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

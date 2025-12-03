@@ -1,4 +1,4 @@
-package com.example.Fight_Club.model;
+package com.example.fight_club.model;
 
 
 import jakarta.persistence.*;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "fighter")
+@Table(name = "fighters")
 public class Fighter {
 
     @Id
@@ -57,7 +57,4 @@ public class Fighter {
         this.beltColorFighter = beltColorFighter;
         this.dodgeChance = dodgeChance;
     }
-
-
-
 }
